@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: hsl(0, 0%, 98%);
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+main {
+    width: 90%;
+    margin: 30px auto;
+    text-align: left;
+}
+#title {
+    font-weight: 600;
+    text-align: justify;
+    margin: 0px auto 50px;
+}
+#title > p {
+    color: hsl(229, 6%, 66%);
+    font-weight: 400;
+}
+
+div{
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 3px 7px 5px 0px hsl(229, 6%, 66%);
+    height: 200px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: left;
+    background-color: hsl(0, 0%, 100%);
+}
+.supervisor {
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+.team-builder {
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+.karma {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.calculator {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+img{
+    position: absolute;
+    right:20px;
+    bottom:10px;
+}
+#naslov {
+    color: hsl(229, 6%, 66%);
+    font-weight: 400;
+}
+@media only screen and ( min-width: 768px) {
+    #title {
+        width: 50%;
+        margin: 50px auto;
+        font-weight: 600;
+        text-align: center;
+    }
+    #main{
+        margin: 0 auto;
+        height: 100vh;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        align-content: center;
+    }
+    .supervisor{
+        margin-top: 0;
+        align-self: center;
+    }
+    .calculator{
+        align-self: center;
+    }
+    div h1 {
+        margin: 0px;
+        font-weight: 400;
+    }
+    div p {
+        font-size: 12px;
+        font-weight: 200;
+        margin: 0;
+    }
+    img {
+        width: 50px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    div p {
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    #main {
+        width: 80%;
+    }
+    img {
+        width: 80px;
+    }
+}
