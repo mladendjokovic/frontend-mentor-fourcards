@@ -1,104 +1,127 @@
-body {
+:root {
+--dark-blue: hsl(234, 12%, 34%);
+--grayish-blue: hsl(229, 6%, 66%);
+--light-gray: hsl(0, 0%, 98%);
+--red: hsl(0, 78%, 62%);
+--cyan: hsl(180, 62%, 55%);
+--orange: hsl(34, 97%, 64%);
+--blue: hsl(212, 86%, 64%)
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background: hsl(0, 0%, 98%);
-    font-weight: 200;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+}
+body {
+    background-color: var(--light-gray);
 }
 main {
     width: 90%;
-    margin: 30px auto;
-    text-align: left;
+    max-width: 1110px;
+    margin: 0 auto 68px;
+    font-family: 'Poppins', sans-serif;
 }
-#title {
+.heading {
+    margin: 90px auto 65px;
+    text-align: center;
+    color: var(--dark-blue);
+}
+h1 {
+    font-size: 37px;
+    font-weight: 200;
+}
+.bold {
     font-weight: 600;
-    text-align: justify;
-    margin: 0px auto 50px;
 }
-#title > p {
-    color: hsl(229, 6%, 66%);
-    font-weight: 400;
+.heading p {
+    font-size: 15px;
+    color: var(--grayish-blue);
+    width: 46%;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+}
+.container > .card, .cards-container {
+    width: 33%;
+    max-width: 350px;
+    flex: 1;
+}
+.cards-container {
+    margin: 0 30px;
 }
 
-div{
-    position: relative;
-    margin-bottom: 20px;
-    box-shadow: 3px 7px 5px 0px hsl(229, 6%, 66%);
-    height: 200px;
+.cards-container > .card:first-child {
+    margin-bottom: 30px;
+}
+.card {
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    align-self: center;
+    text-align: right;
     border-radius: 5px;
-    padding: 10px 20px;
+    background-color: white;
+    transition: .4s;
+}
+.card-content {
+    width: 82%;
+    margin: 0 auto;
+    padding: 32px 0 32px;
+}
+h2 {
+    font-size: 20px;
     text-align: left;
-    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 9px;
+}
+.card p {
+    font-size: 13px;
+    margin-bottom: 31px;
+    text-align: left;
+    color: var(--grayish-blue);
 }
 .supervisor {
-    border-top: 5px solid hsl(180, 62%, 55%);
+    border-top: 5px solid var(--cyan);
 }
-.team-builder {
-    border-top: 5px solid hsl(0, 78%, 62%);
+.tm {
+    border-top: 5px solid var(--red);
 }
 .karma {
-    border-top: 5px solid hsl(34, 97%, 64%);
+    border-top: 5px solid var(--orange);
 }
-.calculator {
-    border-top: 5px solid hsl(212, 86%, 64%);
+.calc {
+    border-top: 5px solid var(--blue);
 }
-img{
-    position: absolute;
-    right:20px;
-    bottom:10px;
+.card:hover {
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
 }
-#naslov {
-    color: hsl(229, 6%, 66%);
-    font-weight: 400;
-}
-@media only screen and ( min-width: 768px) {
-    #title {
-        width: 50%;
-        margin: 50px auto;
-        font-weight: 600;
-        text-align: center;
+
+@media (max-width: 650px) {
+    main {
+        margin-bottom: 78px;
     }
-    #main{
-        margin: 0 auto;
-        height: 100vh;
-        width: 80%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1em;
-        align-content: center;
+    h1 {
+        font-size: 24px;
     }
-    .supervisor{
-        margin-top: 0;
-        align-self: center;
+    .heading p {
+        width: 83%;
     }
-    .calculator{
-        align-self: center;
+    .card p {
+        margin-bottom: 24px;
     }
-    div h1 {
-        margin: 0px;
-        font-weight: 400;
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
-    div p {
-        font-size: 12px;
-        font-weight: 200;
-        margin: 0;
+    .cards-container {
+        margin: 23px 0;
+        width: 82%;
     }
-    img {
-        width: 50px;
+    .cards-container .card:first-child {
+        margin-bottom: 23px;
     }
-}
-@media only screen and (min-width: 1024px) {
-    div p {
-        font-size: 15px;
-    }
-}
-@media only screen and (min-width: 1440px) {
-    #main {
-        width: 80%;
-    }
-    img {
-        width: 80px;
+    .container > .card {
+        width: 82%;
     }
 }
