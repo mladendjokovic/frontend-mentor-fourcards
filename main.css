@@ -15,21 +15,24 @@
 }
 body {
     background-color: var(--light-gray);
+    font-family: 'Poppins', sans-serif;
 }
 main {
     width: 90%;
     max-width: 1110px;
     margin: 0 auto 68px;
-    font-family: 'Poppins', sans-serif;
 }
 .heading {
-    margin: 90px auto 65px;
+    margin: 72px auto 65px;
     text-align: center;
     color: var(--dark-blue);
 }
 h1 {
     font-size: 37px;
     font-weight: 200;
+}
+h1.bold {
+    margin-bottom: 18px;
 }
 .bold {
     font-weight: 600;
@@ -56,7 +59,7 @@ h1 {
     margin-bottom: 30px;
 }
 .card {
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 10px 20px -5px hsla(229, 6%, 66%, 0.3);
     align-self: center;
     text-align: right;
     border-radius: 5px;
@@ -66,30 +69,31 @@ h1 {
 .card-content {
     width: 82%;
     margin: 0 auto;
-    padding: 32px 0 32px;
+    padding: 27px 0 30px;
 }
 h2 {
     font-size: 20px;
     text-align: left;
     margin-bottom: 9px;
+    color: var(--dark-blue);
 }
 .card p {
     font-size: 13px;
-    margin-bottom: 31px;
+    margin-bottom: 39px;
     text-align: left;
     color: var(--grayish-blue);
 }
 .supervisor {
-    border-top: 5px solid var(--cyan);
+    border-top: 4px solid var(--cyan);
 }
 .tm {
-    border-top: 5px solid var(--red);
+    border-top: 4px solid var(--red);
 }
 .karma {
-    border-top: 5px solid var(--orange);
+    border-top: 4px solid var(--orange);
 }
 .calc {
-    border-top: 5px solid var(--blue);
+    border-top: 4px solid var(--blue);
 }
 .card:hover {
     -ms-transform: scale(1.1);
@@ -108,7 +112,7 @@ h2 {
         width: 83%;
     }
     .card p {
-        margin-bottom: 24px;
+        margin-bottom: 31px;
     }
     .container {
         flex-direction: column;
